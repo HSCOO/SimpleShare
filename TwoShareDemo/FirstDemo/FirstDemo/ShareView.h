@@ -11,5 +11,7 @@
 @interface ShareView : UIView
 
 + (instancetype)shareWithListData:(NSArray<NSString *>*)listData;
+- (instancetype)initWithListData:(NSArray<NSString *>*)listData;
+
 
 @end

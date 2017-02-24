@@ -8,13 +8,15 @@
 
 #import "ShareView.h"
 #import "Header.h"
+#import "ShareModel.h"
+#import "ShareManager.h"
 
 static CGFloat const TitleH = 30.0f;
 static CGFloat const ScrollH = 120.0f;
 static CGFloat const CancelBtnH = 55.0f;
 static CGFloat const Padding = 10.0f;
 
-//应用图标、标题
+//about target app icon、title
 static CGFloat const IconWH = 60.0f;
 static CGFloat const AppTitleH = 30.0f;
 
@@ -31,13 +33,20 @@ static CGFloat const AppTitleH = 30.0f;
 
 + (instancetype)shareWithListData:(NSArray<NSString *>*)listData
 {
-    ShareView *shareView = [[ShareView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HIGHT)];
-    
-    [shareView creatBgView];
-    
-    [shareView creatListViewWithData:listData];
-    
+    ShareView *shareView = [[ShareView alloc]initWithListData:listData];
     return shareView;
+}
+
+- (instancetype)initWithListData:(NSArray<NSString *> *)listData
+{
+    if (self = [super init]) {
+        
+        self = [[ShareView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HIGHT)];
+        [self creatBgView];
+        [self creatListViewWithData:listData];
+
+    }
+    return self;
 }
 
 - (void)creatBgView
@@ -108,22 +117,27 @@ static CGFloat const AppTitleH = 30.0f;
         make.top.equalTo(scrollView.mas_bottom);
         make.height.offset(CancelBtnH);
     }];
+    [self showListView];
+    [self addAppDataToScrollView:scrollView ListData:data];
 }
 
 - (void)addAppDataToScrollView:(UIScrollView *)scrollView
                       ListData:(NSArray *)listData
 {
-    scrollView.contentSize = CGSizeMake(IconWH * listData.count, ScrollH);
+    scrollView.contentSize = CGSizeMake((IconWH + Padding) * listData.count, ScrollH);
+    scrollView.showsHorizontalScrollIndicator = NO;
     
-    for (int i = 0; i < listData.count; i ++)
+    for (NSInteger i = 0; i < listData.count; i ++)
     {
+        ShareModel *model = listData[i];
+        
         UIButton *btn = [[UIButton alloc]init];
-        [btn setBackgroundImage:[UIImage imageNamed:@"sinaweibo"] forState:UIControlStateNormal];
+        [btn setBackgroundImage:[UIImage imageNamed:model.iconName] forState:UIControlStateNormal];
         
         UILabel *label = [[UILabel alloc]init];
         label.textColor = [UIColor blackColor];
-        label.font = [UIFont systemFontOfSize:15];
-        label.text = @"weibo";
+        label.font = [UIFont systemFontOfSize:12];
+        label.text = model.titleStr;
         label.textAlignment = NSTextAlignmentCenter;
         
         [scrollView addSubview:btn];
@@ -143,6 +157,30 @@ static CGFloat const AppTitleH = 30.0f;
             make.height.offset(AppTitleH);
             make.width.equalTo(btn);
         }];
+        
+        btn.btnClick = ^{
+            
+            [self shareWithModel:model Type:i];
+        };
+    }
+}
+
+- (void)shareWithModel:(ShareModel *)model Type:(NSInteger)type
+{
+    switch (type) {
+        case targetTypeCustom:
+        {
+            NSLog(@"targetTypeCustom");
+        }
+            break;
+        case targetTypeWeibo:
+        {
+            NSLog(@"targetTypeWeibo");
+        }
+            break;
+            
+        default:
+            break;
     }
 }
 

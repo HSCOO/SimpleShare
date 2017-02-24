@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>titleStr</key>
+		<string>custom</string>
+		<key>iconName</key>
+		<string>copyUrl</string>
+	</dict>
+	<dict>
+		<key>titleStr</key>
+		<string>weibo</string>
+		<key>iconName</key>
+		<string>sinaweibo</string>
+	</dict>
+	<dict>
+		<key>titleStr</key>
+		<string>QQ Zone</string>
+		<key>iconName</key>
+		<string>tcentkongjian</string>
+	</dict>
+	<dict>
+		<key>titleStr</key>
+		<string>QQ</string>
+		<key>iconName</key>
+		<string>tcentQQ</string>
+	</dict>
+	<dict>
+		<key>titleStr</key>
+		<string>TXWeibo</string>
+		<key>iconName</key>
+		<string>tcentWeibo</string>
+	</dict>
+	<dict>
+		<key>titleStr</key>
+		<string>wechat</string>
+		<key>iconName</key>
+		<string>wechat</string>
+	</dict>
+	<dict>
+		<key>titleStr</key>
+		<string>moments</string>
+		<key>iconName</key>
+		<string>wechatquan</string>
+	</dict>
+</array>
+</plist>
