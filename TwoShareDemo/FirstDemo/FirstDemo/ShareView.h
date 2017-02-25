@@ -10,8 +10,8 @@
 
 @interface ShareView : UIView
 
-+ (instancetype)shareWithListData:(NSArray<NSString *>*)listData;
-- (instancetype)initWithListData:(NSArray<NSString *>*)listData;
++ (instancetype)shareViewWithData:(NSArray<NSString *>*)data;
+- (instancetype)initWithData:(NSArray<NSString *>*)data;
 
 
 @end

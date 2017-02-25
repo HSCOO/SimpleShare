@@ -8,7 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-
+@class ShareModel;
+@class ShareView;
 typedef NS_ENUM(NSInteger,targetType)
 {
     targetTypeCustom = 0,
@@ -18,5 +19,11 @@ typedef NS_ENUM(NSInteger,targetType)
 
 
 @interface ShareManager : NSObject
+
+
++ (__kindof ShareView *)shareWithData:(NSArray<NSString *> *)data;
+
++ (void)shareWithModel:(ShareModel *)model Type:(NSInteger)type;
+
 
 @end

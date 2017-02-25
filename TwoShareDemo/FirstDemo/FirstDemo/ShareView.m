@@ -8,8 +8,8 @@
 
 #import "ShareView.h"
 #import "Header.h"
-#import "ShareModel.h"
 #import "ShareManager.h"
+#import "ShareModel.h"
 
 static CGFloat const TitleH = 30.0f;
 static CGFloat const ScrollH = 120.0f;
@@ -31,19 +31,19 @@ static CGFloat const AppTitleH = 30.0f;
 
 @implementation ShareView
 
-+ (instancetype)shareWithListData:(NSArray<NSString *>*)listData
++ (instancetype)shareViewWithData:(NSArray<NSString *>*)data
 {
-    ShareView *shareView = [[ShareView alloc]initWithListData:listData];
+    ShareView *shareView = [[ShareView alloc] initWithData:data];
     return shareView;
 }
 
-- (instancetype)initWithListData:(NSArray<NSString *> *)listData
+- (instancetype)initWithData:(NSArray<NSString *>*)data
 {
     if (self = [super init]) {
         
         self = [[ShareView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HIGHT)];
         [self creatBgView];
-        [self creatListViewWithData:listData];
+        [self creatListViewWithData:data];
 
     }
     return self;
@@ -160,29 +160,12 @@ static CGFloat const AppTitleH = 30.0f;
         
         btn.btnClick = ^{
             
-            [self shareWithModel:model Type:i];
+            [ShareManager shareWithModel:model Type:i];
         };
     }
 }
 
-- (void)shareWithModel:(ShareModel *)model Type:(NSInteger)type
-{
-    switch (type) {
-        case targetTypeCustom:
-        {
-            NSLog(@"targetTypeCustom");
-        }
-            break;
-        case targetTypeWeibo:
-        {
-            NSLog(@"targetTypeWeibo");
-        }
-            break;
-            
-        default:
-            break;
-    }
-}
+
 
 - (void)showListView
 {

@@ -7,9 +7,10 @@
 //
 
 #import "ViewController.h"
-#import "ShareView.h"
+#import "ShareManager.h"
 #import "Header.h"
 #import "ShareModel.h"
+#import "ShareView.h"
 
 @interface ViewController ()
 
@@ -39,7 +40,8 @@
     __weak typeof(self) weakSelf = self;
     btn.btnClick = ^{
         
-        [weakSelf.view addSubview:[ShareView shareWithListData:dataArr]];
+        ShareView *view = [ShareManager shareWithData:dataArr];
+        [weakSelf.view addSubview:view];
     };
 }
 
