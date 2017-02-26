@@ -29,6 +29,7 @@
 		1834C6D51E5C234B000B9F68 /* wechat@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1834C6C71E5C234A000B9F68 /* wechat@3x.png */; };
 		1834C6D61E5C234B000B9F68 /* wechatquan@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1834C6C81E5C234A000B9F68 /* wechatquan@2x.png */; };
 		1834C6D71E5C234B000B9F68 /* wechatquan@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1834C6C91E5C234A000B9F68 /* wechatquan@3x.png */; };
+		18F4B7EA1E624816002257EA /* tree.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F4B7E91E624816002257EA /* tree.png */; };
 		18FD2ACC1E6009DF00823453 /* ShareModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FD2ACB1E6009DF00823453 /* ShareModel.m */; };
 		18FD2ACF1E600E8C00823453 /* ListData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18FD2ACE1E600E8C00823453 /* ListData.plist */; };
 		18FD2AD21E60165A00823453 /* ShareManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FD2AD11E60165A00823453 /* ShareManager.m */; };
@@ -66,6 +67,7 @@
 		1834C6C81E5C234A000B9F68 /* wechatquan@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wechatquan@2x.png"; sourceTree = "<group>"; };
 		1834C6C91E5C234A000B9F68 /* wechatquan@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wechatquan@3x.png"; sourceTree = "<group>"; };
 		18D3D9B1948A93D33A5B81E5 /* Pods-FirstDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirstDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FirstDemo/Pods-FirstDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		18F4B7E91E624816002257EA /* tree.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tree.png; sourceTree = "<group>"; };
 		18FD2ACA1E6009DF00823453 /* ShareModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareModel.h; sourceTree = "<group>"; };
 		18FD2ACB1E6009DF00823453 /* ShareModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareModel.m; sourceTree = "<group>"; };
 		18FD2ACE1E600E8C00823453 /* ListData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ListData.plist; sourceTree = "<group>"; };
@@ -127,8 +129,7 @@
 		180C27EC1E5AD1CA0052E52D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				18FD2ACD1E600E3B00823453 /* Data */,
-				1834C6BB1E5C234A000B9F68 /* image */,
+				18FD2ACD1E600E3B00823453 /* Resource */,
 				180C27ED1E5AD1CA0052E52D /* main.m */,
 			);
 			name = "Supporting Files";
@@ -164,7 +165,7 @@
 			name = Category;
 			sourceTree = "<group>";
 		};
-		1834C6BB1E5C234A000B9F68 /* image */ = {
+		1834C6BB1E5C234A000B9F68 /* ListImages */ = {
 			isa = PBXGroup;
 			children = (
 				1834C6BC1E5C234A000B9F68 /* copyUrl@2x.png */,
@@ -182,15 +183,26 @@
 				1834C6C81E5C234A000B9F68 /* wechatquan@2x.png */,
 				1834C6C91E5C234A000B9F68 /* wechatquan@3x.png */,
 			);
+			name = ListImages;
 			path = image;
 			sourceTree = "<group>";
 		};
-		18FD2ACD1E600E3B00823453 /* Data */ = {
+		18F4B7E41E623E39002257EA /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				18F4B7E91E624816002257EA /* tree.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		18FD2ACD1E600E3B00823453 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				18F4B7E41E623E39002257EA /* Images */,
+				1834C6BB1E5C234A000B9F68 /* ListImages */,
 				18FD2ACE1E600E8C00823453 /* ListData.plist */,
 			);
-			name = Data;
+			name = Resource;
 			sourceTree = "<group>";
 		};
 		22A9D1353D8C9F693C544147 /* Pods */ = {
@@ -244,6 +256,7 @@
 				TargetAttributes = {
 					180C27E81E5AD1CA0052E52D = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 832N2G49H3;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -283,6 +296,7 @@
 				1834C6D51E5C234B000B9F68 /* wechat@3x.png in Resources */,
 				1834C6CF1E5C234B000B9F68 /* tcentkongjian@3x.png in Resources */,
 				1834C6CD1E5C234B000B9F68 /* sinaweibo@3x.png in Resources */,
+				18F4B7EA1E624816002257EA /* tree.png in Resources */,
 				1834C6CC1E5C234A000B9F68 /* sinaweibo@2x.png in Resources */,
 				1834C6D21E5C234B000B9F68 /* tcentWeibo@2x.png in Resources */,
 				1834C6D71E5C234B000B9F68 /* wechatquan@3x.png in Resources */,
@@ -474,10 +488,16 @@
 			baseConfigurationReference = 18D3D9B1948A93D33A5B81E5 /* Pods-FirstDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COMPRESS_PNG_FILES = NO;
+				DEVELOPMENT_TEAM = 832N2G49H3;
 				INFOPLIST_FILE = FirstDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.onlystu.FirstDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_PNG_TEXT = NO;
 			};
 			name = Debug;
 		};
@@ -486,10 +506,16 @@
 			baseConfigurationReference = 8F7FD518C96B7B661C90C410 /* Pods-FirstDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COMPRESS_PNG_FILES = NO;
+				DEVELOPMENT_TEAM = 832N2G49H3;
 				INFOPLIST_FILE = FirstDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.onlystu.FirstDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_PNG_TEXT = NO;
 			};
 			name = Release;
 		};
