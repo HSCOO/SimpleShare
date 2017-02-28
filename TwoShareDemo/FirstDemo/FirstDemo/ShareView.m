@@ -9,7 +9,7 @@
 #import "ShareView.h"
 #import "Header.h"
 #import "ShareManager.h"
-#import "ShareModel.h"
+#import "ListModel.h"
 
 static CGFloat const TitleH = 30.0f;
 static CGFloat const ScrollH = 120.0f;
@@ -49,6 +49,7 @@ static CGFloat const AppTitleH = 30.0f;
     return self;
 }
 
+//黑色半透明背景，点击隐藏列表
 - (void)creatBgView
 {
     _bgView = [[UIView alloc]init];
@@ -65,6 +66,7 @@ static CGFloat const AppTitleH = 30.0f;
     [_bgView addGestureRecognizer:tap];
 }
 
+//创建分享列表
 - (void)creatListViewWithData:(NSArray *)data
 {
     _listView = [[UIView alloc]init];
@@ -121,6 +123,7 @@ static CGFloat const AppTitleH = 30.0f;
     [self addAppDataToScrollView:scrollView ListData:data];
 }
 
+//把app图标标题加载到ScrollView
 - (void)addAppDataToScrollView:(UIScrollView *)scrollView
                       ListData:(NSArray *)listData
 {
@@ -129,7 +132,7 @@ static CGFloat const AppTitleH = 30.0f;
     
     for (NSInteger i = 0; i < listData.count; i ++)
     {
-        ShareModel *model = listData[i];
+        ListModel *model = listData[i];
         
         UIButton *btn = [[UIButton alloc]init];
         [btn setBackgroundImage:[UIImage imageNamed:model.iconName] forState:UIControlStateNormal];
@@ -158,14 +161,15 @@ static CGFloat const AppTitleH = 30.0f;
             make.width.equalTo(btn);
         }];
         
+        __weak typeof(self) weakSelf = self;
         btn.btnClick = ^{
-            
-            [ShareManager shareWithModel:model Type:i];
+            //回调点击类型
+            if (weakSelf.blo) {
+                weakSelf.blo(i);
+            }
         };
     }
 }
-
-
 
 - (void)showListView
 {

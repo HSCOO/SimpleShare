@@ -6,12 +6,11 @@
 //  Copyright © 2017年 OnlyStu. All rights reserved.
 //
 
+//tip:分享的数据模型
+
 #import <Foundation/Foundation.h>
 
 @interface ShareModel : NSObject
-
-@property (copy , nonatomic ,readonly) NSString * iconName;
-@property (copy , nonatomic ,readonly) NSString * titleStr;
 
 @property (copy , nonatomic ) NSString * urlSchems;
 @property (copy , nonatomic ) NSString * shareImage;

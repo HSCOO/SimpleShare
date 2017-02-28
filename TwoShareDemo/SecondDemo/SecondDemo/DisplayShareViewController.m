@@ -25,6 +25,11 @@ static NSString *const NO_VALUE = @"No value";
     [self displayShareView];
 }
 
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    [self.view endEditing:YES];
+}
+
 - (void)displayShareView
 {
     UITextView *textView = [[UITextView alloc]init];

@@ -17,12 +17,16 @@ typedef NS_ENUM(NSInteger,targetType)
     targetTypeWeixin
 };
 
-
 @interface ShareManager : NSObject
 
+/**
+ * 创建分享列表
+ */
++ (ShareView *)getShareViewWithData:(NSArray<NSString *> *)data;
 
-+ (__kindof ShareView *)shareWithData:(NSArray<NSString *> *)data;
-
+/**
+ * 根据分享模型和类型分享
+ */
 + (void)shareWithModel:(ShareModel *)model Type:(NSInteger)type;
 
 

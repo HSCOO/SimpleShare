@@ -33,6 +33,7 @@
 		18FD2ACC1E6009DF00823453 /* ShareModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FD2ACB1E6009DF00823453 /* ShareModel.m */; };
 		18FD2ACF1E600E8C00823453 /* ListData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18FD2ACE1E600E8C00823453 /* ListData.plist */; };
 		18FD2AD21E60165A00823453 /* ShareManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FD2AD11E60165A00823453 /* ShareManager.m */; };
+		18FD8DAD1E653859001717CA /* ListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FD8DAC1E653859001717CA /* ListModel.m */; };
 		530BE4AF3D197F94F041F763 /* libPods-FirstDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E54B970B211D6167250F9633 /* libPods-FirstDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +74,8 @@
 		18FD2ACE1E600E8C00823453 /* ListData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ListData.plist; sourceTree = "<group>"; };
 		18FD2AD01E60165A00823453 /* ShareManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareManager.h; sourceTree = "<group>"; };
 		18FD2AD11E60165A00823453 /* ShareManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareManager.m; sourceTree = "<group>"; };
+		18FD8DAB1E653859001717CA /* ListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListModel.h; sourceTree = "<group>"; };
+		18FD8DAC1E653859001717CA /* ListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListModel.m; sourceTree = "<group>"; };
 		8F7FD518C96B7B661C90C410 /* Pods-FirstDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirstDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-FirstDemo/Pods-FirstDemo.release.xcconfig"; sourceTree = "<group>"; };
 		E54B970B211D6167250F9633 /* libPods-FirstDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FirstDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -144,6 +147,8 @@
 				18FD2AD11E60165A00823453 /* ShareManager.m */,
 				18FD2ACA1E6009DF00823453 /* ShareModel.h */,
 				18FD2ACB1E6009DF00823453 /* ShareModel.m */,
+				18FD8DAB1E653859001717CA /* ListModel.h */,
+				18FD8DAC1E653859001717CA /* ListModel.m */,
 			);
 			name = ShareListView;
 			sourceTree = "<group>";
@@ -364,6 +369,7 @@
 				1834C6BA1E5C1F51000B9F68 /* UIButton+Click.m in Sources */,
 				18FD2AD21E60165A00823453 /* ShareManager.m in Sources */,
 				180C282D1E5AD6730052E52D /* ShareView.m in Sources */,
+				18FD8DAD1E653859001717CA /* ListModel.m in Sources */,
 				180C27F41E5AD1CA0052E52D /* ViewController.m in Sources */,
 				180C27F11E5AD1CA0052E52D /* AppDelegate.m in Sources */,
 				180C27EE1E5AD1CA0052E52D /* main.m in Sources */,

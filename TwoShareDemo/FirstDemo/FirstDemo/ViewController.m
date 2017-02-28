@@ -11,6 +11,7 @@
 #import "Header.h"
 #import "ShareModel.h"
 #import "ShareView.h"
+#import "ListModel.h"
 
 @interface ViewController ()
 
@@ -33,15 +34,28 @@
     NSMutableArray *dataArr = [NSMutableArray array];
     for (NSDictionary *dic in plistArr)
     {
-        ShareModel *model = [ShareModel modelWithDic:dic];
+        ListModel *model = [ListModel modelWithDic:dic];
         [dataArr addObject:model];
     }
     
     __weak typeof(self) weakSelf = self;
     btn.btnClick = ^{
         
-        ShareView *view = [ShareManager shareWithData:dataArr];
+        //创建分享列表
+        ShareView *view = [ShareManager getShareViewWithData:dataArr];
         [weakSelf.view addSubview:view];
+        
+        //列表点击事件，分享
+        view.blo = ^(targetType type){
+        
+            ShareModel *model = [[ShareModel alloc]init];
+            model.shareImage = [[NSBundle mainBundle] pathForResource:@"tree" ofType:@"png"];
+            model.urlSchems = @"seconddemo://";
+            model.shareText = @"This is share";
+            model.shareURL = @"https://www.vecteezy.com/vector-art/81839-set-of-flat-autumn-vector-trees";
+            
+            [ShareManager shareWithModel:model Type:type];
+        };
     };
 }
 
